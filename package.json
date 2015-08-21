@@ -1,0 +1,7 @@
+{
+  "name": "webpack-archetype",
+  "private": true,
+  "devDependencies": {
+    "webpack": "^1.11.0"
+  }
+}

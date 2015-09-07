@@ -1,3 +1,4 @@
-node_modules
-
+assets/bundles/
+node_modules/
+webpack-stats.json
 *.swp

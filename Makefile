@@ -1,9 +1,8 @@
+PATH := node_modules/.bin:$(PATH)
 assets := $(shell find ./assets -path ./assets/bundles -prune -o -type f -print)
 
 
 build: node_modules assets/bundles
-	@webpack
-	@touch build
 
 node_modules: package.json
 	@npm install

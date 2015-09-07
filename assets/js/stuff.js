@@ -1,1 +1,1 @@
-exports.message = 'Stuffy things';
+export default 'Stuffy things';

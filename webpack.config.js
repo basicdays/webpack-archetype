@@ -11,6 +11,7 @@ var nodeModulesDir = path.resolve('./node_modules');
 module.exports = {
 	entry: {
 		main: [
+			'webpack/hot/dev-server',
 			path.join(assetsDir, 'js/index.js'),
 			path.join(assetsDir, 'less/main.less')
 		]
@@ -19,6 +20,13 @@ module.exports = {
 		path: buildDir,
 		filename: '[name].bundle.js',
 		chunkFilename: '[id].chunk.js',
+		publicPath: '/assets/bundles'
+	},
+	devServer: {
+		//this option currently doesn't work for some reason, CLI works though
+		//https://github.com/webpack/webpack-dev-server/issues/256
+		hot: true,
+		inline: true,
 	},
 	devtool: 'source-map',
 	module: {

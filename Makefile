@@ -12,5 +12,8 @@ assets/bundles: node_modules webpack.config.js $(assets)
 	@webpack
 	@touch assets/bundles
 
+run: node_modules
+	@webpack-dev-server --hot
+
 clean:
 	@rm -rf assets/bundles
